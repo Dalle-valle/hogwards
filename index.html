@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/mhx8lqz.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="180x180" href="ikoner/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="ikoner/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="ikoner/favicon-16x16.png" />
+    <link rel="manifest" href="ikoner/site.webmanifest" />
+    <link rel="shortcut icon" href="ikoner/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="msapplication-config" content="ikoner/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Hacked Hogwarts Student List</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="searchbar"></div>
+      </nav>
+    </header>
+
+    <section id="splash">
+      <h1 class="headline">Hogwarts Student List</h1>
+    </section>
+    <div class="full_page">
+      <div class="statistics">
+        <img class="frame" src="images/frame.png" alt="frame" />
+
+        <div class="centered">
+          <h5 class="students_huff"></h5>
+          <h5 class="students_raven"></h5>
+          <h5 class="students_slyth"></h5>
+          <h5 class="students_gryf"></h5>
+          <h5 class="students_expel"></h5>
+          <h5 class="students_prefect"></h5>
+        </div>
+      </div>
+      <h4>Filter by</h4>
+      <ul class="filterwrapper">
+        <li data-action="filter" data-filter="girls" class="buttonstyle">Girls</li>
+        <li data-action="filter" data-filter="boys" class="buttonstyle">Boys</li>
+        <li data-action="filter" data-filter="inquis" class="buttonstyle">Inquisitors</li>
+      </ul>
+      <div class="crest_wrapper">
+        <div class="all" data-action="filter" data-filter="all">
+          <h4>All</h4>
+          <img src="images/crests/all.png" alt="all" data-action="filter" data-filter="all" />
+        </div>
+        <div class="hufflepuff">
+          <h4>Hufflepuff</h4>
+          <img src="images/crests/Hufflepuff_ClearBG.png" alt="" data-action="filter" data-filter="hufflepuff" />
+        </div>
+        <div class="ravenclaw">
+          <h4>Ravenclaw</h4>
+          <img src="images/crests/RavenclawCrest.png" alt="" data-action="filter" data-filter="ravenclaw" />
+        </div>
+        <div class="slytherin">
+          <h4>Slytherin</h4>
+          <img src="images/crests/Slytherin_ClearBG.png" alt="" data-action="filter" data-filter="slytherin" />
+        </div>
+        <div class="gryffindor">
+          <h4>Gryffindor</h4>
+          <img src="images/crests/Gryffindor_ClearBG.png" alt="" data-action="filter" data-filter="gryffindor" />
+        </div>
+      </div>
+
+      <h4 class="sortby">Sort by</h4>
+
+      <ul class="sortwrapper">
+        <li data-action="sort" data-sort-direction="asc" data-sort="name" class="buttonstyle">Name</li>
+        <li data-action="sort" data-sort-direction="asc" data-sort="house" class="buttonstyle">House</li>
+        <li data-action="sort" data-sort-direction="asc" data-sort="blood" class="buttonstyle">Blood-Status</li>
+        <li data-action="sort" data-sort-direction="asc" data-sort="gender" class="buttonstyle">Gender</li>
+        <li data-action="sort" data-sort-direction="asc" data-sort="prefect" class="buttonstyle">Prefects</li>
+        <li data-action="sort" data-sort-direction="asc" data-sort="inquis" class="buttonstyle">Inquisitors</li>
+      </ul>
+
+      <div class="sectionwrapper">
+        <section id="list"></section>
+        <template id="student">
+          <article id="student_article_1">
+            <h3 data-field="gender" class="gender"></h3>
+            <h3 data-field="name" class="name"></h3>
+            <h3 data-field="house" class="house"></h3>
+            <img class="img" src="" alt="" />
+            <h3 data-field="rank" class="rank"></h3>
+          </article>
+        </template>
+      </div>
+      <section id="details" class="hide">
+        <article id="student_article_2">
+          <button class="close">X</button>
+          <h3 class="name"></h3>
+          <img src="" alt="" />
+
+          <h3 class="house"></h3>
+          <h3 class="rank" data-field="prefect"></h3>
+          <h3 data-field="blood" class="blood"></h3>
+          <button class="prefect btn1" data-field="prefect">Make Prefect</button>
+          <button class="expel btn2">Expel Student</button>
+          <button class="inquisitorial btn3">Make Inquisitorial Member</button>
+        </article>
+      </section>
+
+      <!-- Dialogue -->
+
+      <div id="onlytwo" class="hide">
+        <div class="content">
+          <button class="closebutton btn close">X</button>
+          <h2>there can only be two Prefects</h2>
+
+          <p><button data-action="remove1">remove</button> <span class="student1">NAME, the TYPE</span></p>
+          <p><button data-action="remove2">remove</button> <span class="student2">NAME, the TYPE</span></p>
+        </div>
+      </div>
+
+      <div id="onlyonekind" class="hide">
+        <div class="content">
+          <button class="closebutton btn close">X</button><br />
+          <h2>That's not gonna work</h2>
+          <br />
+          <h2>Remove the other if you want to appoint a new one</h2>
+          <br />
+          <p><button data-action="remove1">remove</button> <span class="student1">NAME, the TYPE</span></p>
+          <br />
+        </div>
+      </div>
+    </div>
+
+    <div id="nocando" class="hide">
+      <div class="content">
+        <h2>Member is not pure-blooded or member of house Slytherin</h2>
+        <button class="closebutton btn close">X</button>
+      </div>
+    </div>
+
+    <audio id="typekey1" src="images/nooo.swf.mp3"></audio>
+    <!-- 
+    <script src="test.js"></script> -->
+    <script src="script.js"></script>
+  </body>
+</html>

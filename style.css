@@ -1,0 +1,356 @@
+[data-action] {
+  cursor: pointer;
+}
+* {
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  object-fit: cover;
+}
+@font-face {
+  font-family: "harry_potterregular";
+  src: url("fonts/harry_potter-webfont.woff2") format("woff2"), url("fonts/harry_potter-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* #FFD700 */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #d9c8a9;
+}
+h1 {
+  font-family: "harry_potterregular";
+
+  letter-spacing: 5px;
+  color: black;
+  text-align: center;
+  text-shadow: 2px 2px #6183a3;
+}
+
+h2 {
+  color: black;
+}
+h3 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: black;
+  margin: 15px;
+  text-align: center;
+}
+h4 {
+  font-family: "harry_potterregular";
+  color: black;
+  margin: 15px;
+  text-align: center;
+}
+
+h5 {
+  font-family: "harry_potterregular";
+  font-weight: 400;
+  font-style: normal;
+  color: black;
+
+  margin: 20px;
+}
+.shady {
+  background-color: #fff;
+}
+
+#splash {
+  display: none;
+}
+
+.crest_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  max-width: 1400px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.ravenclaw,
+.slytherin,
+.gryffindor,
+.hufflepuff,
+.all {
+  flex-grow: 1;
+  flex-basis: 150px;
+  /* min-height: 400px; */
+  padding: 15px;
+}
+
+#list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+#list article {
+  width: 100%;
+  box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border-top-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+}
+
+#list img {
+  padding: 15px;
+}
+
+.detail_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 80vh;
+  width: 80vw; */
+}
+
+#details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 10%;
+  width: 100%;
+  height: 80vh;
+  overflow: scroll;
+  background-color: white;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+}
+.student_article_2 {
+  background-color: black;
+}
+#details img {
+  max-width: 300px;
+}
+.hide {
+  visibility: hidden;
+}
+
+.filterby {
+  text-align: center;
+}
+
+.sortby {
+  text-align: center;
+}
+.sortwrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sortwrapper li {
+  color: black;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.filterwrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonstyle {
+  color: black;
+  text-transform: uppercase;
+  background: white;
+  padding: 20px;
+  border: 4px solid black;
+  border-radius: 6px;
+  display: inline-block;
+  margin: 5px;
+}
+
+.buttonstyle:hover {
+  color: #494949;
+  border-radius: 50px;
+  border-color: #494949;
+  transition: all 0.3s ease 0s;
+}
+
+p {
+  color: black;
+  font-size: 1.5rem;
+  margin: 15px;
+}
+.frame {
+  visibility: hidden;
+  height: 40%;
+  width: 40%;
+}
+.statistics {
+  padding-top: 15px;
+  position: relative;
+  text-align: center;
+  margin: 15px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.centered {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: auto;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.house {
+  font-weight: bold;
+}
+
+.gender {
+  font-size: 2rem;
+}
+
+.isprefect {
+  color: red;
+}
+button {
+  color: #20bf6b;
+  text-transform: uppercase;
+  background: white;
+  padding: 20px;
+  border: 4px solid #20bf6b;
+  border-radius: 6px;
+  display: inline-block;
+  margin: 5px;
+}
+button:hover {
+  color: #494949;
+  border-radius: 50px;
+  border-color: #494949;
+  transition: all 0.3s ease 0s;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#onlytwo .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+#onlyonekind .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+#nocando .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+#onlyonekind > div > p > span {
+  color: white;
+}
+#onlyonekind > div > h2 {
+  color: white;
+}
+#nocando > div > h2 {
+  color: white;
+}
+
+#onlytwo > div > h2 {
+  color: white;
+}
+#student_article_2 {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  flex-direction: column;
+  padding: 20px;
+}
+@media only screen and (min-width: 1280px) {
+  h1 {
+    font-size: 8rem;
+  }
+
+  h4 {
+    font-size: 3em;
+  }
+
+  h5 {
+    font-size: 1.5rem;
+  }
+  #splash {
+    /* width: 100%;
+    height: 70vh;
+    background-image: url(images/rhii-photography-Xy6FpnFyVjo-unsplash.jpg);
+    background-size: cover;
+    max-width: none;
+    margin-bottom: 40px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .frame {
+    visibility: visible;
+  }
+}
+
+.dissapear {
+  animation-name: myAnimation;
+  animation-duration: 2000ms;
+  animation-fill-mode: forwards;
+}
+@keyframes myAnimation {
+  0% {
+    opacity: 1;
+    transform: rotateX(90deg);
+  }
+  50% {
+    opacity: 0.5;
+    transform: rotateX(0deg);
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+}
+
+[data-sort-direction="asc"]::after {
+  content: "⇓";
+}
+
+[data-sort-direction="desc"]::after {
+  content: "⇑";
+}

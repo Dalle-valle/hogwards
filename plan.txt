@@ -1,0 +1,14 @@
+**** To do list for hacked Hogwarts Student List ****
+
+
+
+- Load JSONs √
+- Clean Names √
+- Filter √
+- Sorting √
+- Statistics update √
+- Singleview
+- Promote
+- Expell
+- Hack 
+- CSS Clean-up
