@@ -299,33 +299,6 @@ button:hover {
   flex-direction: column;
   padding: 20px;
 }
-@media only screen and (min-width: 1280px) {
-  h1 {
-    font-size: 8rem;
-  }
-
-  h4 {
-    font-size: 3em;
-  }
-
-  h5 {
-    font-size: 1.5rem;
-  }
-  #splash {
-    /* width: 100%;
-    height: 70vh;
-    background-image: url(images/rhii-photography-Xy6FpnFyVjo-unsplash.jpg);
-    background-size: cover;
-    max-width: none;
-    margin-bottom: 40px; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .frame {
-    visibility: visible;
-  }
-}
 
 .dissapear {
   animation-name: myAnimation;
@@ -354,4 +327,31 @@ button:hover {
 
 [data-sort-direction="desc"]::after {
   content: "⇑";
+}
+@media only screen and (min-width: 1280px) {
+  h1 {
+    font-size: 8rem;
+  }
+
+  h4 {
+    font-size: 3em;
+  }
+
+  h5 {
+    font-size: 1.5rem;
+  }
+  #splash {
+    /* width: 100%;
+    height: 70vh;
+    background-image: url(images/rhii-photography-Xy6FpnFyVjo-unsplash.jpg);
+    background-size: cover;
+    max-width: none;
+    margin-bottom: 40px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .frame {
+    visibility: visible;
+  }
 }

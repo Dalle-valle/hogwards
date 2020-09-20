@@ -331,7 +331,7 @@ function showDetail(student) {
     } else {
       makePrefect(selectedStudent);
     }
-    hackTheSystem function and additional hacking-features
+
     // removes the other
     function removeOther(other) {
       // ask the user to ignore or remove 'other'
